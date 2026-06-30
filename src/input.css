@@ -1,0 +1,5 @@
+@import "tailwindcss";
+/* By default show hamburger, hide close */
+#menu-icon .close { display: none; }
+#menu-icon.open .hamburger { display: none; }
+#menu-icon.open .close { display: inline; }

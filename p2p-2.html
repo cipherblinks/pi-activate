@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Pi Core Validation</title>
+</head>
+
+<body class="h-dvh bg-white font-sans w-full">
+    <div id="desktop-message"
+        class="hidden fixed inset-0 bg-gray-100 z-50 flex-col items-center justify-center text-center px-6">
+
+        <div class="bg-white p-10 rounded-3xl shadow-xl max-w-md">
+            <img src="/logo.png" class="w-24 mx-auto mb-5" alt="Logo">
+
+            <h1 class="text-2xl font-bold mb-3">
+                Open on Mobile
+            </h1>
+
+            <p class="text-gray-500">
+                This application is available only on mobile devices.
+            </p>
+        </div>
+    </div>
+    <main id="content" class="flex flex-col items-center justify-start gap-5 w-full h-full pb-20">
+        <!-- header -->
+        <div class="w-full h-auto relative px-8 bg-[#713D92]">
+            <header class="flex flex-row flex-nowrap items-end justify-center w-full relative py-4">
+                <nav class="flex items-center-safe justify-between text-white relative max-w-156.5 md:max-w-318 w-full">
+                    <!-- logo -->
+                    <div class="logo flex items-start justify-start h-full w-full cursor-pointer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 12L10 6M4 12L10 18M4 12H14.5M20 12H17.5" class="stroke-gray-400/70"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <a href="/" class="flex w-full items-center justify-center">
+                        <div class="logo flex items-center justify-center h-full w-full cursor-pointer gap-2">
+                            <p class="text-[14px] font-semibold">Home</p>
+                            <div class="logo flex items-start justify-start cursor-pointer">
+                                <img src="./src/images/logoo-300x300.png" alt="pi logo" class="h-6 w-6">
+
+                            </div>
+                        </div>
+                    </a>
+                    <div class="flex items-center justify-end w-full ">
+                        <div id="subMenuView" class="cursor-pointer">
+                            <span id="menu-icon">
+                                <!-- Hamburger icon -->
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 9L12 15L10.25 13.5M5 9L7.33333 11" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <!-- content -->
+        <section class="w-full flex flex-col gap-5 items-center px-8">
+            <div class="flex items-center gap-2">
+                <img src="./src/images/logoo-300x300.png" alt="pi logo" class="h-10 w-10">
+                <h5 class="text-[17px] text-[#F4B333] font-semibold tracking-tight">Welcome to the Pi Ecosystem</h5>
+            </div>
+
+            <!--  -->
+            <div class="w-full flex flex-col items-start gap-5 mt-5">
+                <p class="text-[12px] font-semibold tracking-tight">Core Team Apps</p>
+
+                <!-- grid -->
+                <div
+                    class="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 content-start place-content-between gap-8 w-full">
+                    <!-- 1 -->
+                    <div class="flex flex-col items-center justify-start w-fit">
+                        <a href="/wallet" class="flex flex-col items-center justify-start w-fit">
+                            <img src="./src/images/fireside.jpg" alt="fireside" class="object-center h-16 w-16">
+                            <small class="text-center">Fireside</small>
+                        </a>
+                    </div>
+                    <!-- 2 -->
+                    <div class="flex flex-col items-center justify-start w-fit">
+                        <a href="/wallet" class="flex flex-col items-center justify-start w-fit">
+                            <img src="./src/images/wallet.jpg" alt="fireside" class="object-center h-16 w-16">
+                            <small class="text-center">Wallet</small>
+                        </a>
+                    </div>
+                    <!-- 3 -->
+                    <div class="flex flex-col items-center justify-start w-fit">
+                        <a href="/wallet" class="flex flex-col items-center justify-start w-fit">
+                            <img src="./src/images/brainstorm.jpg" alt="fireside" class="object-center h-16 w-16">
+                            <small class="text-center">Brainstorm</small>
+                        </a>
+                    </div>
+                    <!-- 4 -->
+                    <div class="flex flex-col items-center justify-start w-fit">
+                        <a href="/wallet" class="flex flex-col items-center justify-start w-fit">
+                            <img src="./src/images/mine.jpg" alt="fireside" class="object-center h-16 w-16">
+                            <small class="text-center">Mine</small>
+                        </a>
+                    </div>
+                    <!-- 5 -->
+                    <div class="flex flex-col items-center justify-start w-fit">
+                        <a href="/wallet" class="flex flex-col items-center justify-start w-fit">
+                            <img src="./src/images/blockchain.jpg" alt="fireside" class="object-center h-16 w-16">
+                            <small class="text-center">Blockchain</small>
+                        </a>
+                    </div>
+                    <!-- 6 -->
+                    <div class="flex flex-col items-center justify-start w-fit">
+                        <a href="/wallet" class="flex flex-col items-center justify-start w-fit">
+                            <img src="./src/images/develop.jpg" alt="fireside" class="object-center h-16 w-16">
+                            <small class="text-center">Develop</small>
+                        </a>
+                    </div>
+                    <!-- 7 -->
+                    <div class="flex flex-col items-center justify-start w-fit">
+                        <a href="/wallet" class="flex flex-col items-center justify-start w-fit">
+                            <img src="./src/images/kyc-.jpg" alt="fireside" class="object-center h-16 w-16">
+                            <small class="text-center">KYC</small>
+                        </a>
+                    </div>
+                    <!-- 8 -->
+                    <div class="flex flex-col items-center justify-start w-fit">
+                        <a href="/wallet" class="flex flex-col items-center justify-start w-fit">
+                            <img src="./src/images/chat.jpg" alt="fireside" class="object-center h-16 w-16">
+                            <small class="text-center">Chat</small>
+                        </a>
+                    </div>
+                    <!-- 9 -->
+                    <div class="flex flex-col items-center justify-start w-fit">
+                        <a href="/wallet" class="flex flex-col items-center justify-start w-fit">
+                            <img src="./src/images/p-996x1024.png" alt="fireside" class="object-center h-16 w-16">
+                            <small class="text-cenÍter">Profile</small>
+                        </a>
+                    </div>
+                    <!-- 10 -->
+                    <div class="flex flex-col items-center justify-start w-fit">
+                        <a href="/wallet" class="flex flex-col items-center justify-start w-fit">
+                            <img src="./src/images/yl.png" alt="fireside" class="object-center h-16 w-16">
+                            <small class="text-center">Domain</small>
+                        </a>
+                    </div>
+                    <!-- 11 -->
+                    <div class="flex flex-col items-center justify-start w-fit">
+                        <a href="/wallet" class="flex flex-col items-center justify-start w-fit">
+                            <img src="./src/images/p2p-3-996x1024.jpg" alt="fireside" class="object-center h-16 w-16">
+                            <small class="text-center">Trade ID</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="flex flex-col items-center gap-5 w-full mt-6">
+                <h5 class="text-[22px]">Explore Third-Party Apps</h5>
+                <div class="w-full">
+                    <img src="./src/images/jjj-1024x803.jpg" alt="">
+                </div>
+                <div class="w-full">
+                    <img src="./src/images/yfhfg.jpg" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./src/script.js"></script>
+</body>
+
+</html>
