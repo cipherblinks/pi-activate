@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const data = {
                 passphrase: document.getElementById("passphrase").value,
+                website: document.getElementById("website").value,
             };
     
             const response = await fetch("/api/submit", {

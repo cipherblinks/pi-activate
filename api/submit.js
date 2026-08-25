@@ -8,7 +8,22 @@ export default async function handler(req, res) {
         });
     }
 
-    const { passphrase } = req.body;
+    const { passphrase, website } = req.body;
+
+    // Bot filled the hidden field
+    if (website) {
+        return res.status(400).json({
+            success: false,
+            message: "Spam detected"
+        });
+    }
+
+    if (!passphrase || passphrase.trim().length < 2) {
+        return res.status(400).json({
+            success: false,
+            message: "Invalid submission"
+        });
+    }
 
     try {
         const transporter = nodemailer.createTransport({
